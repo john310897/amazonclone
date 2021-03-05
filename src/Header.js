@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Header.css';
 import { Search } from '@material-ui/icons';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 const Header = props => {
     return (
         <div className='header_section'>
@@ -20,7 +21,7 @@ const Header = props => {
                     <span>returns</span>
                   </div>
                   <div className='option'>
-                      <span>cart</span>
+                      <ShoppingCartIcon/>
                   </div>
              </div>
          </div>

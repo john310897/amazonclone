@@ -1,0 +1,7 @@
+.home_banner_img{
+    width: 100%;
+    mask-image: linear-gradient(to top, transparent 25%, black 75%);
+}
+.home_products{
+    display: flex;
+}

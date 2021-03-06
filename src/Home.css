@@ -4,7 +4,14 @@
 }
 .home_products{
     display: flex;
+    flex-direction: row;
 }
 .home_module{
     background-color: azure;
+}
+@media only screen and (max-width:700px){
+    .home_products{
+        display: flex;
+        flex-direction: column;
+    }
 }

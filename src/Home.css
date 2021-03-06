@@ -5,3 +5,6 @@
 .home_products{
     display: flex;
 }
+.home_module{
+    background-color: azure;
+}

@@ -1,9 +1,13 @@
 import React from 'react';
+import Header from './Header';
 import './Home.css';
 import Product from './Product';
+
 const Home = () => {
     return (
+        
         <div className='home_module'>
+         
             {/* home banner */}
             <div className='home_banner'>
                 <img src='https://cdn.cultofmac.com/wp-content/uploads/2016/07/Prime-Day-Banner.jpg' className='home_banner_img'/>

@@ -1,19 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
+import './Checkout.css';
 const Checkout = () => {
     return (
         <div className='checkout__module'>
+            <div>
             <img src='https://www.poptelecom.co.uk/application/uploads/media/Amazon_Prime_Banner.png' className='checkout__image'/>
+            
+            </div>
             <div className='checkout__total'>
-                <span>total number of items :</span>
-                <span>1</span><br/>
-                <span>total amount :</span>
-                <span>$1000</span>
+              <span> total number of items: 0</span> 
+              <span> total price: 0</span> 
+                <button className='checkout__button'>proceed to checkout</button>
             </div>
         </div>
     );
 };
-
-
-export default Checkout;
+export default Checkout; 

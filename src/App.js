@@ -7,13 +7,15 @@ function App() {
   return (
     <div className="App">
         {/* header component */}
-        <Header/>
+        
         {/* Routing component*/}
+      
         <Router>
-          <Switch>
-            <Route path='/' exact component={Home}/>
-            <Route path='/checkout'  component={Checkout}/>
-          </Switch>
+          <Header/>      
+            <Switch>
+              <Route path='/' exact component={Home}/>
+              <Route path='/checkout'  component={Checkout}/>
+            </Switch>
         </Router>
     </div>
   );

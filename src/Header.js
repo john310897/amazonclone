@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Header.css';
 import { Search } from '@material-ui/icons';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import {Link,BrowserRouter as Router} from 'react-router-dom';
+import {Link,BrowserRouter as Router, BrowserRouter} from 'react-router-dom';
 const Header = props => {
     return (
         <div className='header_section'>
@@ -22,12 +22,9 @@ const Header = props => {
                     <span>returns</span>
                   </div>
                   <div className='option'>
-                    <Router>
-                    <Link to='/checkout'>
-                        <ShoppingCartIcon/>
-                    </Link>
-                    
-                    </Router>
+                        <Link to='/checkout'>
+                            <ShoppingCartIcon/>
+                        </Link>
                       
                   </div>
              </div>

@@ -1,0 +1,25 @@
+
+.checkout__module{
+    display: flex;
+    margin: 0%;
+    width: 100%;
+    align-items: center;
+}
+.checkout__image{
+    width: 100%;
+    height: max-content;
+    object-fit:cover;
+    
+}
+
+.checkout__total{
+    display:flex;
+    flex-direction: column;
+}
+.checkout__button{
+    background-color: #ffa500;
+    border: 0ch;
+    padding: 10px;
+    margin:20px;
+    text-align: center;
+}

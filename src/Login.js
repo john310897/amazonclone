@@ -27,7 +27,7 @@ const Login = props => {
                 </div>
                 <div>
                 <br/>
-                    <button className='login__button_new'>I am a new customer</button>
+                  <Link to='/signup'> <button className='login__button_new'>I am a new customer</button></Link> 
                 </div>
                 
             </div>

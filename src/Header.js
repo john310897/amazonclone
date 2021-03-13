@@ -19,14 +19,14 @@ const Header = props => {
                   <div className='option'>
                     <span>hello guest</span>
                     <span>
-                      <Link to='/login'>sign in</Link>
+                      <Link to='/login' className='link'>sign in</Link>
                       </span>
                   </div>
                   <div className='option'>
                     <span>returns</span>
                   </div>
                   <div className='option'>
-                        <Link to='/checkout'>
+                        <Link to='/checkout' className='link'>
                             <ShoppingCartIcon/>
                         </Link>
                   </div>

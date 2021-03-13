@@ -5,6 +5,7 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import Checkout from './Checkout';
 import Signup from './Signup';
 import Login from './Login';
+import Practice from './Practice';
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
               <Route path='/checkout'  component={Checkout}/>
               <Route path='/login'  component={Login}/>
               <Route path='/signup'  component={Signup}/>
+              <Route path='/practice' component={Practice}/>
             </Switch>
         </Router>
     </div>

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Checkout.css';
 import DeleteIcon from '@material-ui/icons/Delete';
+import AppContext from './AppContext';
+
 const Checkout = () => {
+    const {cartitems}=useContext(AppContext);
     return (
         <div className='checkout__section'>
             <div className='checkout__header'>
@@ -17,42 +20,31 @@ const Checkout = () => {
 
             <div className='checkout__item_list'>
                 <div className='checkout_item'>
-                        <div className='checkout__items'>
+
+                    {
+                        cartitems.map((items)=>
+                        (
+                            
+                            <div className='checkout__items'>
                         <div className='checkout__item_image'>
-                            <img src='https://images-na.ssl-images-amazon.com/images/I/71ZXj1QEE0L._SL1500_.jpg' className='checkout_img'/>
+                            <img src={items[1].img} className='checkout_img'/>
                         </div>
                         <div className='checkout__item_title'>
-                            <p>GINOYA BROTHERS - Women's Semi Georgette Embroidery Work Round Neck Long Formal Flowy Cocktail Gown
-
-                            GINOYA BROTHERS - Women's Semi Georgette Embroidery Work Round Neck Long Formal Flowy Cocktail Gown
-                            GINOYA BROTHERS - Women's Semi Georgette Embroidery Work Round Neck Long Formal Flowy Cocktail Gown
-                            </p>
+                            <p>{items[0].name}</p>
+                            <strong>${items[2].price}</strong>
                             <div className='checkout__buttons'>
                                 <button className='item_checkout__button'><DeleteIcon/></button>
                             </div>
                         </div>
                     </div>
                     
-                </div>
-                {/* item 2 */}
-                <div className='checkout_item'>
-                        <div className='checkout__items'>
-                        <div className='checkout__item_image'>
-                            <img src='https://images-na.ssl-images-amazon.com/images/I/71ZXj1QEE0L._SL1500_.jpg' className='checkout_img'/>
-                        </div>
-                        <div className='checkout__item_title'>
-                            <p>GINOYA BROTHERS - Women's Semi Georgette Embroidery Work Round Neck Long Formal Flowy Cocktail Gown
-
-                            GINOYA BROTHERS - Women's Semi Georgette Embroidery Work Round Neck Long Formal Flowy Cocktail Gown
-                            GINOYA BROTHERS - Women's Semi Georgette Embroidery Work Round Neck Long Formal Flowy Cocktail Gown
-                            </p>
-                            <div className='checkout__buttons'>
-                                <button className='item_checkout__button'><DeleteIcon/></button>       
-                            </div>
-                        </div>
-                    </div>
+                        ))
+                        
+                    }
+                        
                     
                 </div>
+                
             </div>
             
             

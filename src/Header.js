@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import './Header.css';
 import { Search } from '@material-ui/icons';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {Link,BrowserRouter as Router, BrowserRouter} from 'react-router-dom';
+import AppContext from './AppContext';
 const Header = props => {
+  const {value,setvalue,cartitems}=useContext(AppContext);
     return (
         <div className='header_section'>
           <Link to='/'>
@@ -28,6 +30,7 @@ const Header = props => {
                   <div className='option'>
                         <Link to='/checkout' className='link'>
                             <ShoppingCartIcon/>
+                            {cartitems.length}
                         </Link>
                   </div>
              </div>

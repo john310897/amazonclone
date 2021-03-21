@@ -7,7 +7,7 @@
     flex-direction: row;
 }
 .home_module{
-    background-color: azure;
+    background-color: #E6E6E3;
 }
 @media only screen and (max-width:980px){
     .home_products{

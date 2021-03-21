@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from './AppContext';
 import Header from './Header';
 import './Home.css';
 import Product from './Product';
 
 const Home = () => {
+    
     return (
         
         <div className='home_module'>

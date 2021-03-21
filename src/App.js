@@ -6,8 +6,16 @@ import Checkout from './Checkout';
 import Signup from './Signup';
 import Login from './Login';
 import Practice from './Practice';
+import {useContext} from 'react';
+import { AppContext } from './AppContext';
+import { useState } from 'react';
+
 function App() {
+  let [value,setvalue]=useState(0);
+  let [cartitems,setcartitems]=useState([]);
+  
   return (
+    <AppContext.Provider value={{value,setvalue,cartitems,setcartitems}}>
     <div className="App">
         {/* header component */}
         
@@ -24,6 +32,7 @@ function App() {
             </Switch>
         </Router>
     </div>
+    </AppContext.Provider>
   );
 }
 

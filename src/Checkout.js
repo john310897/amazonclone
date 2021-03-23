@@ -1,10 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext,useState } from 'react';
 import './Checkout.css';
 import DeleteIcon from '@material-ui/icons/Delete';
 import AppContext from './AppContext';
 
 const Checkout = () => {
-    const {cartitems}=useContext(AppContext);
+    const {cartitems,iprice}=useContext(AppContext);
+    
+    
+    const getTotal=()=>{
+        
+    }
+
+    
     return (
         <div className='checkout__section'>
             <div className='checkout__header'>
@@ -12,8 +19,8 @@ const Checkout = () => {
                         <img src='https://www.poptelecom.co.uk/application/uploads/media/Amazon_Prime_Banner.png' className='checkout__image'/>
                     </div>
                     <div className='checkout__total'>
-                            <span> total number of items: 0</span> 
-                            <span> total price: 0</span> 
+                            <span> total number of items: {cartitems.length}</span> 
+                            <span> total price:$ {iprice}</span> 
                             <button className='checkout__button'>proceed to checkout</button>
                     </div>
             </div>

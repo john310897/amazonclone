@@ -3,22 +3,20 @@ import React, { useContext } from 'react';
 import AppContext from './AppContext';
 import './Product.css';
 const Product=({name,img,price})=>{
-    let {value,setvalue,cartitems,setcartitems}=useContext(AppContext);
+    let p=price;
+    let {value,setvalue,iprice,setiprice,cartitems,setcartitems}=useContext(AppContext);
     
 
     const Change=()=>{
         console.log(cartitems);
         setvalue(value+1);
-        const a=['name','img']
+        let j=parseInt(iprice);
+        let k=parseInt(price);
+        setiprice(j+k);
         setcartitems([...cartitems,
             [{name},{img},{price}]
         ]);
-        // cartitems=[
-        //     {name},
-        //     {img},
-        //     {price}
-        // ]
-        // setcartitems(...cartitems);
+        
         console.log(cartitems);
     }
     return(

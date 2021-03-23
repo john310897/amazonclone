@@ -12,10 +12,11 @@ import { useState } from 'react';
 
 function App() {
   let [value,setvalue]=useState(0);
+  let [iprice,setiprice]=useState(0);
   let [cartitems,setcartitems]=useState([]);
   
   return (
-    <AppContext.Provider value={{value,setvalue,cartitems,setcartitems}}>
+    <AppContext.Provider value={{value,setvalue,iprice,setiprice,cartitems,setcartitems}}>
     <div className="App">
         {/* header component */}
         

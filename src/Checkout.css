@@ -17,14 +17,19 @@
 .checkout__total{
     display:flex;
     flex-direction: column;
+    text-align:left;
+    justify-content: center;
+    margin-left :10px ;
     
 }
 .checkout__button{
     background-color: #ffa500;
     border: 0ch;
     padding: 5px;
-    margin:5px;
+    margin-top: 15px;
     text-align: center;
+    width: 200px;    
+    outline: none;
 }
 .checkout__items{
     display: flex;
@@ -47,7 +52,6 @@
     text-align: justify;
     padding: 10px;
     margin-right: 10px;
-
 }
 .checkout__buttons{
     display:flex;

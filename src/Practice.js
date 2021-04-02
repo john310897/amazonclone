@@ -21,5 +21,4 @@ const practice = props => {
     );
 };
 
-
 export default practice;

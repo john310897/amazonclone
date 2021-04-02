@@ -2,16 +2,17 @@ import React, { useContext,useState } from 'react';
 import './Checkout.css';
 import DeleteIcon from '@material-ui/icons/Delete';
 import AppContext from './AppContext';
+import {useHistory} from 'react-router-dom';
 
 const Checkout = () => {
-    const {cartitems,iprice}=useContext(AppContext);
-    
-    
-    const getTotal=()=>{
-        
+    const {setcartitems,cartitems,iprice}=useContext(AppContext);
+    const history=useHistory();    
+    const delete_item=()=>{
+        cartitems.pop();
+        setcartitems(cartitems);
+        history.push('/checkout');
     }
-
-    
+ 
     return (
         <div className='checkout__section'>
             <div className='checkout__header'>
@@ -27,11 +28,9 @@ const Checkout = () => {
 
             <div className='checkout__item_list'>
                 <div className='checkout_item'>
-
                     {
                         cartitems.map((items)=>
-                        (
-                            
+                        (  
                             <div className='checkout__items'>
                         <div className='checkout__item_image'>
                             <img src={items[1].img} className='checkout_img'/>
@@ -40,21 +39,15 @@ const Checkout = () => {
                             <p>{items[0].name}</p>
                             <strong>${items[2].price}</strong>
                             <div className='checkout__buttons'>
-                                <button className='item_checkout__button'><DeleteIcon/></button>
+                                <button className='item_checkout__button' onClick={delete_item}><DeleteIcon/></button>
                             </div>
                         </div>
                     </div>
                     
-                        ))
-                        
+                        ))   
                     }
-                        
-                    
                 </div>
-                
             </div>
-            
-            
         </div>
         
     );

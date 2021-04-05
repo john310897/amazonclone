@@ -23,10 +23,10 @@ function App() {
         {/* Routing component*/}
       
         <Router>
-          <Header/>      
+               
             <Switch>
-              <Route path='/' exact component={Home}/>
-              <Route path='/checkout'  component={Checkout}/>
+              <Route path='/' exact ><Header/> <Home/></Route>
+              <Route path='/checkout'><Header/> <Checkout/></Route>
               <Route path='/login'  component={Login}/>
               <Route path='/signup'  component={Signup}/>
               <Route path='/practice' component={Practice}/>

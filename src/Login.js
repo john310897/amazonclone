@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const Login = props => {
     return (
         <div className='login__section'>
-            <img src='https://www.signsallsigns.com/wp-content/uploads/2019/03/amazon-logo-transparent.png' className='logo'/>
+            <Link to='/'><img src='https://www.signsallsigns.com/wp-content/uploads/2019/03/amazon-logo-transparent.png' className='logo'/></Link>
             <div className='login__box'>
                 <br/>
                 <h2 align='left' className='login__label'>Sign in</h2><br/>
@@ -22,11 +22,12 @@ const Login = props => {
                     
                 </div>
                 <div>
-                <br/>
+                
                     <button className='login__button'>Sign in</button>
                 </div>
+                <p>By continuing, you agree to Amazon's trial CloneConditions of Use and Privacy Notice.</p>
                 <div>
-                <br/>
+                
                   <Link to='/signup'> <button className='login__button_new'>I am a new customer</button></Link> 
                 </div>
                 

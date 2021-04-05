@@ -1,9 +1,10 @@
 import React from 'react';
 import './Signup.css';
+import {Link} from 'react-router-dom';
 const Signup = props => {
     return (
         <div className='signup__section'>
-            <img src='https://www.signsallsigns.com/wp-content/uploads/2019/03/amazon-logo-transparent.png' className='logo'/>
+            <Link to='/'><img src='https://www.signsallsigns.com/wp-content/uploads/2019/03/amazon-logo-transparent.png' className='logo'/></Link>
             <div className='signup__box'>
                 <div className='email_section'>
                 <h2 className='createaccount'>Create account</h2>

@@ -7,8 +7,10 @@ import {useHistory} from 'react-router-dom';
 const Checkout = () => {
     const {setcartitems,cartitems,iprice}=useContext(AppContext);
     const history=useHistory();    
-    const delete_item=()=>{
-        cartitems.pop();
+    const delete_item=({p})=>{
+        let t=p;
+        console.log(t);
+        cartitems.splice(1,1);
         setcartitems(cartitems);
         history.push('/checkout');
     }
@@ -39,7 +41,7 @@ const Checkout = () => {
                             <p>{items[0].name}</p>
                             <strong>${items[2].price}</strong>
                             <div className='checkout__buttons'>
-                                <button className='item_checkout__button' onClick={delete_item}><DeleteIcon/></button>
+                                <button className='item_checkout__button' onClick={delete_item} p={items[0].name}><DeleteIcon/></button>
                             </div>
                         </div>
                     </div>

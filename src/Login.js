@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 import './Login.css';
-import {Link} from 'react-router-dom';
+import {Link,useHistory} from 'react-router-dom';
 import {auth} from './firebase';
 
 const Login = () => {
-    const [email,setEmail]=useState();
-    const [password,setpassword]=useState();
+    const history=useHistory();
+    const [email,setEmail]=useState("");
+    const [password,setpassword]=useState("");
     const signin=()=>{
-        console.log(email,password);
+        auth.signInWithEmailAndPassword(email,password).then((auth)=>{
+            history.push('/')
+        }).catch(error=>alert(error.message));
     }
     const register=()=>{
-
+        auth.createUserWithEmailAndPassword(email,password).then((auth)=>{
+            if(auth){
+                history.push('/');
+            }
+            console.log(auth);
+        })
+        .catch(error=>alert(error.message))
     }
     return (
         <div className='login__section'>
@@ -32,7 +41,6 @@ const Login = () => {
                     
                 </div>
                 <div>
-                
                     <button className='login__button' onClick={signin}>Sign in</button>
                 </div>
                 <p>By continuing, you agree to Amazon's trial CloneConditions of Use and Privacy Notice.</p>

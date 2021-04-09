@@ -15,7 +15,7 @@ const Home = () => {
                 <img src='https://cdn.cultofmac.com/wp-content/uploads/2016/07/Prime-Day-Banner.jpg' className='home_banner_img'/>
             </div>
             {/* home products */}
-            <div className='home_products'>
+            <div className='home_products1'>
                 {/* product */}
                 <Product name='
 Apple iPad (10.2-inch, Wi-Fi, 32GB) - Space Grey (Latest Model, 8th Generation)' img='https://images-na.ssl-images-amazon.com/images/I/71ZXj1QEE0L._SL1500_.jpg' price='1000'/>
@@ -24,8 +24,6 @@ Apple iPad (10.2-inch, Wi-Fi, 32GB) - Space Grey (Latest Model, 8th Generation)'
 
                 {/* product */}
                 {/* product */}
-            </div>
-            <div className='home_products'>
                 <Product name='
 Mi Notebook Horizon Edition 14 Intel Core i5-10210U 10th Gen Thin and Light Laptop(8GB/512GB SSD/Windows 10/Nvidia MX350 2GB Graphics/Grey/1.35Kg)' img='https://images-na.ssl-images-amazon.com/images/I/712rw0zcH8L._SL1500_.jpg' price='40000'/>
                 <Product name='Lenovo ThinkPad E14 Intel Core i5 10th Gen 14-inch Full HD IPS Thin and Light Laptop (8GB RAM/ 1TB HDD + 256GB SSD/ Windows 10 Home/ Microsoft Office Home...' img='https://images-na.ssl-images-amazon.com/images/I/71k3N4gxNeL._SL1486_.jpg' price='5000'/>
@@ -34,8 +32,6 @@ Mi Notebook Horizon Edition 14 Intel Core i5-10210U 10th Gen Thin and Light Lapt
                 {/* product */}
                 {/* product */}
                 {/* product */}
-            </div>
-            <div className='home_products'>
                 <Product name='
 Apple iPad Air (10.9-inch, Wi-Fi + Cellular, 64GB) - Silver (4th Generation Model)' img='https://images-na.ssl-images-amazon.com/images/I/71-mJuQew-L._SL1500_.jpg' price='25000'/>
                 <Product name='Apple iPad Pro (11-inch, Wi-Fi, 256GB) - Space Grey (2nd Generation)' img='https://images-na.ssl-images-amazon.com/images/I/81p1L85KinL._SL1500_.jpg' price='4500'/>

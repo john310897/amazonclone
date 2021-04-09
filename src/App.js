@@ -6,22 +6,31 @@ import Checkout from './Checkout';
 import Signup from './Signup';
 import Login from './Login';
 import Practice from './Practice';
-import {useContext} from 'react';
+import {useContext, useEffect} from 'react';
 import { AppContext } from './AppContext';
 import { useState } from 'react';
-
+import {auth} from './firebase';
 function App() {
   let [value,setvalue]=useState(0);
   let [iprice,setiprice]=useState(0);
   let [cartitems,setcartitems]=useState([]);
-  
+  let [user,setuser]=useState();
+
+  useEffect(()=>{
+    auth.onAuthStateChanged(authUser=>{
+      console.log('the user is', authUser.email);
+
+      if(authUser){
+        setuser(authUser.email)
+      }
+
+    })
+  },[])
+
   return (
-    <AppContext.Provider value={{value,setvalue,iprice,setiprice,cartitems,setcartitems}}>
+    <AppContext.Provider value={{value,setvalue,iprice,setiprice,cartitems,setcartitems,user,setuser}}>
     <div className="App">
-        {/* header component */}
         
-        {/* Routing component*/}
-      
         <Router>
                
             <Switch>
